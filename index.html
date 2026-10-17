@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For My Baby 💙</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;text-align:center;color:#4d5576;
+ font-family:Georgia,serif;
+ background:linear-gradient(145deg,#e4f3ff,#fff0f6,#e6f2ff)
+}
+button{font:inherit;cursor:pointer;border:0}
+.hero{min-height:100vh;min-height:100svh;display:flex;
+ flex-direction:column;align-items:center;justify-content:center;padding:25px}
+h1{font-size:clamp(36px,9vw,54px);color:#4779ad}
+h2{color:#4779ad}
+p{line-height:1.8}
+.hero p{max-width:340px}
+.btn{padding:14px 22px;border-radius:28px;color:white;
+ background:linear-gradient(100deg,#80b9ee,#e99abc);margin:8px}
+nav{position:sticky;top:0;z-index:5;background:#fffaf0ed;
+ padding:10px 4px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px}
+nav a{background:white;border-radius:20px;padding:8px;
+ font:12px Arial;color:#4779ad;text-decoration:none}
+main{max-width:720px;margin:auto;padding:12px}
+section{scroll-margin-top:90px;background:#ffffffdf;
+ border:1px solid white;border-radius:22px;padding:25px 18px;
+ margin:20px 0;box-shadow:0 8px 25px #739cc51a}
+.letter{text-align:left;white-space:pre-line;line-height:1.95}
+.signature{color:#d779a2;font-weight:bold;font-style:italic}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.photos img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:12px}
+.photos p{font-size:13px}
+.time{display:inline-block;background:#e8f3ff;padding:12px;
+ border-radius:14px;margin:4px;min-width:65px}
+.time b{display:block;font-size:24px;color:#4779ad}
+#secret{display:none;background:#fff0f6;padding:15px;border-radius:15px}
+.hidden{display:none!important}
+footer{padding:30px;color:#4779ad}
+.heart{position:fixed;bottom:-30px;pointer-events:none;z-index:9;
+ animation:rise 5s linear forwards}
+@keyframes rise{to{transform:translateY(-110vh) rotate(35deg);opacity:0}}
+</style>
+</head>
+<body>
+<header class="hero" id="welcome">
+ <p>♡ A LITTLE LOVE NOTE ♡</p>
+ <h1>For My Baby 💙</h1>
+ <h2>I made this just for you, Sayang ❤️</h2>
+ <p>A tiny world filled with my love, our memories,
+ and all the hugs I owe you.</p>
+ <button class="btn" id="open">Open your surprise 💌</button>
+ <p>Made with all my love, just for you.</p>
+</header>
+
+<div id="site" class="hidden">
+<nav>
+ <a href="#letter">Love letter 💌</a>
+ <a href="#miss">I miss you 🥺</a>
+ <a href="#memories">Our memories 📸</a>
+ <a href="#count">Countdown ⏳</a>
+ <a href="#surprise">Surprise 🎁</a>
+</nav>
+<main>
+<section id="letter">
+ <h2>To My Favourite Person 💙</h2>
+ <div class="letter">My dearest Sayang,
+
+Sometimes I wish I could put all my feelings into words,
+but even a thousand words would never be enough to explain
+how much you mean to me.
+
+You have become such a special part of my life.
+You make ordinary moments feel beautiful, and even on
+difficult days, the thought of you makes me smile.
+
+I love the little things about you, the memories we share,
+and the future I hope we can build together.
+
+No matter how busy our days get or how far apart we are,
+you will always have a special place in my heart.
+
+Thank you for being my baby, my favourite person,
+and the one I want to make more memories with.
+
+I love you more than these little words can say. 💙</div>
+ <p class="signature">Forever yours, Pondatti 💙</p>
+</section>
+
+<section id="miss">
+ <h2>When I Say I Miss You 🥺</h2>
+ <p>It means I wish you were here beside me.</p>
+ <p>I wish I could hold your hand, hug you tightly,
+ rest beside you, and forget about everything else for a while.</p>
+ <p>Until I can see you again, imagine this page giving you
+ the biggest hug from me. 🫂💗</p>
+ <p class="signature">One hug from you would fix so many things.</p>
+</section>
+
+<section id="memories">
+ <h2>Our Little Memory Lane 📸</h2>
+ <p>Every picture holds a moment I want to remember.</p>
+ <div class="photos">
+  <div><img src="photos/us1.jpg" alt="Our memory 1"><p>My favourite person ♡</p></div>
+  <div><img src="photos/us2.jpg" alt="Our memory 2"><p>A moment worth keeping ♡</p></div>
+  <div><img src="photos/us3.jpg" alt="Our memory 3"><p>My happy place ♡</p></div>
+  <div><img src="photos/us4.jpg" alt="Our memory 4"><p>More memories to come ♡</p></div>
+ </div>
+ <p>If a photo is missing, add it later using the filenames in the code.</p>
+</section>
+
+<section id="count">
+ <h2>Until I See You Again ⏳</h2>
+ <p id="countmsg">Counting down to our next hug.</p>
+ <div><span class="time"><b id="days">--</b>Days</span>
+ <span class="time"><b id="hours">--</b>Hours</span>
+ <span class="time"><b id="mins">--</b>Minutes</span>
+ <span class="time"><b id="secs">--</b>Seconds</span></div>
+ <p>Change the meeting date in the code to yours.</p>
+</section>
+
+<section id="surprise">
+ <h2>One Last Little Surprise 🎁</h2>
+ <p>Baby, there is something I want you to remember.</p>
+ <button class="btn" id="reveal">Tap for your message 💗</button>
+ <div id="secret">
+  <h2>Hey, my love 🥹💙</h2>
+  <p>If you ever feel tired, lonely, or have a difficult day,
+  remember that someone is cheering for you and loving you
+  with all her heart.</p>
+  <p>I hope we keep choosing kindness, patience, laughter,
+  and each other. One day at a time, one memory at a time.</p>
+  <p>It's you, Sayang. Always special to me. 🩷</p>
+  <p class="signature">Your Pondatti, forever and always 💙</p>
+ </div>
+</section>
+
+<section>
+ <h2>A Song For You 🎶</h2>
+ <p>Press play whenever you want a little reminder of me.</p>
+ <audio id="music" src="music.mp3" loop preload="none"></audio>
+ <button class="btn" id="play">▶ Play our song</button>
+ <p>If music does not play, upload your song as music.mp3.</p>
+</section>
+</main>
+<footer>Made with love, just for you ♡<br>
+<strong>Forever yours, Pondatti 💙</strong></footer>
+</div>
+
+<script>
+const meetDate = "2026-12-01T12:00:00";
+
+document.getElementById("open").onclick=()=>{
+ document.getElementById("welcome").classList.add("hidden");
+ document.getElementById("site").classList.remove("hidden");
+ window.scrollTo(0,0); hearts();
+};
+document.getElementById("reveal").onclick=()=>{
+ const box=document.getElementById("secret");
+ box.style.display=box.style.display==="block"?"none":"block";
+ hearts();
+};
+function countdown(){
+ const diff=new Date(meetDate).getTime()-Date.now();
+ if(Number.isNaN(diff)){
+  document.getElementById("countmsg").textContent="Please check the meeting date.";
+  return;
+ }
+ if(diff<=0){
+  ["days","hours","mins","secs"].forEach(id=>
+   document.getElementById(id).textContent="0");
+  document.getElementById("countmsg").textContent="Time for our hug! 💙";
+  return;
+ }
+ const s=Math.floor(diff/1000);
+ document.getElementById("days").textContent=Math.floor(s/86400);
+ document.getElementById("hours").textContent=Math.floor(s%86400/3600);
+ document.getElementById("mins").textContent=Math.floor(s%3600/60);
+ document.getElementById("secs").textContent=s%60;
+}
+countdown();setInterval(countdown,1000);
+function hearts(){
+ const icons=["💙","🩷","💗","♡","💕"];
+ for(let i=0;i<15;i++){
+  setTimeout(()=>{
+   const h=document.createElement("span");
+   h.className="heart";
+   h.textContent=icons[Math.floor(Math.random()*icons.length)];
+   h.style.left=Math.random()*100+"vw";
+   h.style.fontSize=18+Math.random()*18+"px";
+   h.style.animationDuration=4+Math.random()*3+"s";
+   document.body.appendChild(h);
+   setTimeout(()=>h.remove(),7500);
+  },i*120);
+ }
+}
+const music=document.getElementById("music");
+const play=document.getElementById("play");
+play.onclick=async()=>{
+ if(music.paused){
+  try{await music.play();play.textContent="Ⅱ Pause our song";}
+  catch(e){play.textContent="Upload music.mp3 first 🎶";}
+ }else{music.pause();play.textContent="▶ Play our song";}
+};
+</script>
+</body>
+  </html>
